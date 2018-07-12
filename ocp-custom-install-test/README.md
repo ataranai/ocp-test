@@ -1,4 +1,4 @@
-## deploy application
+## deploy application using test folder
 ```
 oc new-project eap-demo
 oc replace --force -f https://raw.githubusercontent.com/jboss-openshift/application-templates/master/eap/eap71-image-stream.json
@@ -9,6 +9,12 @@ oc new-app --template=test-s2i \
  -p SOURCE_REPOSITORY_REF="master" \
  -p CONTEXT_DIR="ocp-custom-install-test" \
  -p APPLICATION_NAME=eap-custom-test
+```
+
+## change application using test2 folder
+```
+oc env bc/eap-custom-test CUSTOM_INSTALL_DIRECTORIES=test2
+oc start-build eap-custom-test 
 ```
 
 ## delete application

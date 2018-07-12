@@ -1,1 +1,0 @@
-# ocp-deploy-test

@@ -2,6 +2,6 @@
 
 injected_dir=$1
 source /usr/local/s2i/install-common.sh
-install_deployments ${injected_dir}/injected-deployments.war
-install_modules ${injected_dir}/modules
-configure_drivers ${injected_dir}/drivers.env
+install_deployments ${injected_dir}/install_deployments/test.war
+install_modules ${injected_dir}/install_modules
+configure_drivers ${injected_dir}/configure_drivers/drivers.env
